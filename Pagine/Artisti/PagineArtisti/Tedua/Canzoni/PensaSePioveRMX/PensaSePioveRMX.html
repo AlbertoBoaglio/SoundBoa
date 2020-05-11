@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="icon" href="img/IconaLogo.png" type="image/png">
+    <link rel="stylesheet" type="text/css" href="layoutPensaSePioveRMX.css">
+    <meta charset="utf-8">
+    <title>Pensa Se Piove RMX - SoundBoa</title>
+    <script type="text/javascript">
+
+    function PlayMusic(){
+      document.getElementById("Music").play();
+    }
+    function PauseMusic(){
+      document.getElementById("Music").pause();
+    }
+    </script>
+  </head>
+  <body link="#FFFF00" vlink="#FFFF00" alink="#FFFF00">
+    <div id="contenitore">
+
+      <div id="intestazione">
+        <div id="logo">
+          <img src="img/Logo.jpg">
+        </div>
+        <div id="menu">
+          <div class="scelta">
+            <a href="../../../../../../index.html">HOME</a>
+          </div>
+          <div class="scelta">
+            <a href="../../../../../Musica/musica.html">MUSICA</a>
+          </div>
+          <div class="scelta">
+            <a href="../../../../../Artisti/artisti.html">ARTISTI</a>
+          </div>
+          <div class="scelta">
+            <a href="../../../../../Generi/generi.html">GENERI</a>
+          </div>
+          <div class="scelta">
+            <a href="../../../../../Negozio/negozio.html">NEGOZIO</a>
+          </div>
+        </div>
+        <div id="registrati">
+          <a href="../../../../../LocalStorage/localstorage.html"><img src="img/Registrati.jpg"></a>
+        </div>
+      </div>
+
+    <div id="riquadro">
+      <div class="copertina2">
+        <img src="img/PensaSePioveRMX.jpg">
+      </div>
+      <div id="titolo"><b>Pensa Se Piove RMX</b></div>
+      <div id="artista">di <a href="../../Tedua.html">Tedua</a></div>
+      <div id="musica">
+        <button onclick="PlayMusic()" class="bottone">Play</button><button onclick="PauseMusic()" class="bottone">Pause</button>
+        <audio src="mp3/PensaSePioveRMX.mp3" id="Music"></audio>
+      </div>
+    </div>
+    <div class="riga"></div>
+
+    <div id="canzoni">
+      <div class="testo">
+        Altra musica di Tedua
+      </div>
+      <div class="copertina">
+          <a href="../../../Tedua/Canzoni/Vertigini/Vertigini.html"><img src="img/Vertigini.jpg"></a>
+        <div class="testo2">
+          <a href="../../../Tedua/Canzoni/Vertigini/Vertigini.html">Vertigini<br><br></a>
+        </div>
+      </div>
+      <div class="copertina">
+          <a href="../../../Tedua/Canzoni/OmbrelloPerLaPace/OmbrelloPerLaPace.html"><img src="img/OmbrelloPerLaPace.jpg"></a>
+        <div class="testo2">
+          <a href="../../../Tedua/Canzoni/OmbrelloPerLaPace/OmbrelloPerLaPace.html">Ombrello Per La Pace</a>
+        </div>
+      </div>
+      <div class="copertina">
+          <a href="../../../Tedua/Canzoni/Rital/Rital.html"><img src="img/Rital.jpg"></a>
+        <div class="testo2">
+          <a href="../../../Tedua/Canzoni/Rital/Rital.html">Rital<br><br></a>
+        </div>
+      </div>
+
+
+      <div id="canzoni">
+        <div class="copertinafake">
+        </div>
+        <div class="copertinafake">
+        </div>
+      </div>
+
+      <div id="canzoni">
+        <div class="copertinafake">
+        </div>
+        <div class="copertinafake">
+        </div>
+      </div>
+
+      <div id="canzoni">
+        <div class="copertinafake">
+        </div>
+        <div class="copertinafake">
+        </div>
+      </div>
+
+      <div id="piedipagina">
+        Sito creato da Alberto Boaglio
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="icon" href="img/IconaLogo.png" type="image/png">
+    <link rel="stylesheet" type="text/css" href="layoutTheNights.css">
+    <meta charset="utf-8">
+    <title>The Nights - SoundBoa</title>
+    <script type="text/javascript">
+
+    function PlayMusic(){
+      document.getElementById("Music").play();
+    }
+    function PauseMusic(){
+      document.getElementById("Music").pause();
+    }
+    </script>
+  </head>
+  <body link="#FFFF00" vlink="#FFFF00" alink="#FFFF00">
+    <div id="contenitore">
+
+      <div id="intestazione">
+        <div id="logo">
+          <img src="img/Logo.jpg">
+        </div>
+        <div id="menu">
+          <div class="scelta">
+            <a href="../../../../../../index.html">HOME</a>
+          </div>
+          <div class="scelta">
+            <a href="../../../../../Musica/musica.html">MUSICA</a>
+          </div>
+          <div class="scelta">
+            <a href="../../../../../Artisti/artisti.html">ARTISTI</a>
+          </div>
+          <div class="scelta">
+            <a href="../../../../../Generi/generi.html">GENERI</a>
+          </div>
+          <div class="scelta">
+            <a href="../../../../../Negozio/negozio.html">NEGOZIO</a>
+          </div>
+        </div>
+        <div id="registrati">
+          <a href="../../../../../LocalStorage/localstorage.html"><img src="img/Registrati.jpg"></a>
+        </div>
+      </div>
+
+    <div id="riquadro">
+      <div class="copertina2">
+        <img src="img/TheNights.jpg">
+      </div>
+      <div id="titolo"><b>The Nights</b></div>
+      <div id="artista">di <a href="../../Avicii.html">Avicii</a></div>
+      <div id="musica">
+        <button onclick="PlayMusic()" class="bottone">Play</button><button onclick="PauseMusic()" class="bottone">Pause</button>
+        <audio src="mp3/TheNights.mp3" id="Music"></audio>
+      </div>
+    </div>
+    <div class="riga"></div>
+
+    <div id="canzoni">
+      <div class="testo">
+        Altra musica di Avicii
+      </div>
+      <div class="copertina">
+          <a href="../../../Avicii/Canzoni/WaitingForLove/WaitingForLove.html"><img src="img/WaitingForLove.jpg"></a>
+        <div class="testo2">
+          <a href="../../../Avicii/Canzoni/WaitingForLove/WaitingForLove.html">Waiting For Love<br><br></a>
+        </div>
+      </div>
+      <div class="copertina">
+          <a href="../../../Avicii/Canzoni/HeyBrother/HeyBrother.html"><img src="img/HeyBrother.jpg"></a>
+        <div class="testo2">
+          <a href="../../../Avicii/Canzoni/HeyBrother/HeyBrother.html">Hey Brother<br><br></a>
+        </div>
+      </div>
+      <div class="copertina">
+          <a href="../../../Avicii/Canzoni/WakeMeUp/WakeMeUp.html"><img src="img/WakeMeUp.jpg"></a>
+        <div class="testo2">
+          <a href="../../../Avicii/Canzoni/WakeMeUp/WakeMeUp.html">Wake Me Up<br><br></a>
+        </div>
+      </div>
+
+      <div id="canzoni">
+        <div class="copertinafake">
+        </div>
+        <div class="copertinafake">
+        </div>
+      </div>
+
+      <div id="canzoni">
+        <div class="copertinafake">
+        </div>
+        <div class="copertinafake">
+        </div>
+      </div>
+
+      <div id="canzoni">
+        <div class="copertinafake">
+        </div>
+        <div class="copertinafake">
+        </div>
+      </div>
+
+      <div id="piedipagina">
+        Sito creato da Alberto Boaglio
+      </div>
+    </div>
+  </body>
+</html>

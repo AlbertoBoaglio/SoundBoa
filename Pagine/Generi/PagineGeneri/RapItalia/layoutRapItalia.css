@@ -1,0 +1,90 @@
+body {
+  background: #dddddd;
+}
+
+#contenitore {
+  width: 50%;
+  margin: 0px 0px 0px 525px;
+  background: #6f00ff;
+  border: 1px solid yellow;
+}
+
+#intestazione {
+  border-bottom: 1px solid yellow;
+  height: 50px;
+  background: #6f00ff;
+}
+
+#menu {
+  margin: 0px 0px 0px 0px;
+  text-align: center;
+  display: inline-block;
+  position: absolute;
+  height: 50px;
+}
+
+.scelta {
+  display: inline-block;
+  text-align: center;
+  color: #FFFF00;
+  margin: 12px 5px 0px 0px;
+  height: 48px;
+}
+
+#riquadro {
+  margin: 25px 0px 0px 0px;
+}
+
+.testo {
+  color: #FFFF00;
+  margin: 0px 0px 0px 10px;
+}
+
+.copertina {
+  border: 1px solid black;
+  display: inline-block;
+  height: 120px;
+  width: 120px;
+  margin: 10px 30px 0px 30px;
+  color: #ffff00;
+}
+
+#piedipagina {
+  border-top: 1px solid yellow;
+  color: #FFFF00;
+  margin: 150px 0px 0px 0px;
+  text-align: center;
+}
+
+.cerchio {
+  display: inline-block;
+  height: 120px;
+  width: 120px;
+  margin: 10px 30px 0px 30px;
+  color: #ffff00;
+  border-radius: 60px;
+}
+
+#logo {
+  display: inline-block;
+}
+
+.riga {
+  border: 1px solid #FFFF00;
+  margin: 0px 25px 0px 10px;
+}
+
+.titolo {
+  text-align: center;
+}
+
+.nomeartista {
+  text-align: center;
+  font-size: 12px;
+}
+
+#registrati {
+  display: inline-block;
+  margin: 0px 0px 0px 610px;
+
+}

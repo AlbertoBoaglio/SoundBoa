@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="icon" href="img/IconaLogo.png" type="image/png">
+    <link rel="stylesheet" type="text/css" href="layoutLocalStorage.css">
+    <meta charset="utf-8">
+    <title>Registrati - SoundBoa</title>
+    <script>
+
+    function error(error) {
+    	switch(error.code) {
+    	case error.UNKNOWN_ERROR:
+    	alert("La geolocalizzazione ha riscontrato un errore.");
+    	break;
+    	case error.PERMISSION_DENIED:
+    	alert("L'utente non ha autorizzato l'accesso alla sua posizione.");
+    	break;
+    	case error.POSITION_UNAVAILABLE:
+    	alert("L'utente non può essere localizzato.");
+    	break;
+    	case error.TIMEOUT:
+    	alert("La geolocalizzazione ha superato il limite di tempo.");
+    	break;
+    	}
+    }
+    function localizar(position) {
+    var latitud = position.coords.latitude;
+    var longitud = position.coords.longitude;
+    var vel=position.coords.speed;
+    var altitudine=position.coords.altitude;
+    document.getElementById("speed").innerHTML = vel;
+    document.getElementById("altezza").innerHTML = altitudine;
+
+    var latlng = new google.maps.LatLng(latitud, longitud);
+    var myOptions = {
+    zoom: 15,
+    center: latlng,
+    mapTypeId: google.maps.MapTypeId.ROADMAP
+    }
+    var map = new google.maps.Map(document.getElementById("googleMap"),myOptions);
+    var marker = new google.maps.Marker({
+    position: latlng,
+    map: map,
+    title:"Sei qui!" });
+
+    }
+
+    function prova(){
+    	if(navigator.geolocation){
+
+    	 navigator.geolocation.getCurrentPosition(localizar,error);
+    	}  else {
+    	alert("Mi dispaice, il tuo browser non supporta la geolocalizzazione.");
+    	}
+    }
+    </script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=&callback=myMap"></script>
+
+  </head>
+  <body link="#FFFF00" vlink="#FFFF00" alink="#FFFF00">
+    <div id="contenitore">
+
+      <div id="intestazione">
+        <div id="logo">
+          <img src="img/Logo.jpg">
+        </div>
+        <div id="menu">
+          <div class="scelta">
+            <a href="../../index.html">HOME</a>
+          </div>
+          <div class="scelta">
+            <a href="../Musica/musica.html">MUSICA</a>
+          </div>
+          <div class="scelta">
+            <a href="../Artisti/artisti.html">ARTISTI</a>
+          </div>
+          <div class="scelta">
+            <a href="../Generi/generi.html">GENERI</a>
+          </div>
+          <div class="scelta">
+            <a href="../Negozio/negozio.html">NEGOZIO</a>
+          </div>
+        </div>
+        <div id="registrati">
+          <a href="localstorage.html"><img src="img/Registrati.jpg"></a>
+        </div>
+      </div>
+
+      <div id="riquadro">
+        <div id="centrologo">
+          <img src="img/Logo.jpg">
+        </div>
+        <div id="riga"></div>
+        <div class="titolo">
+          <h3>Iscriviti per ascoltare la musica</h3>
+        </div>
+        <div id="localstorage">
+        <form>
+          <table>
+            <tr>
+              <td>
+                Nome:
+              </td>
+              <td>
+                <input type="text" placeholder="Nome">
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Password:
+              </td>
+              <td>
+                <input type="password" placeholder="Password">
+              </td>
+            </tr>
+            <tr>
+              <td>
+                  Sesso:
+              </td>
+              <td>
+                <input type="radio" name="Sesso">Uomo
+                <input type="radio" name="Sesso">Femmina
+              </td>
+            </tr>
+            <tr>
+              <td>
+                 Email:
+              </td>
+              <td>
+                <input type="mail" placeholder="Email" class="email">
+              </td>
+            </tr>
+            <tr>
+              <td class="invio">
+                <input type="submit"value="Invio">
+              </td>
+            </tr>
+          </table>
+        </form>
+      </div>
+
+      <div id="googleMap"></div>
+      <button id="geolocalizzazione" onclick="prova()">Geolocalizzazione</button>
+      <br>
+      <span id="latitud"></span>
+      <br>
+      <span id="longitud"></span>
+      <br>
+      <span id="speed"></span>
+      <br>
+      <span id="altezza"></span>
+      <br>
+      <span id="longitud"></span>
+
+      </div>
+
+
+      <div id="piedipagina">
+        Sito creato da Alberto Boaglio
+      </div>
+    </div>
+  </body>
+</html>

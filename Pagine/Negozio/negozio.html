@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="icon" href="img/IconaLogo.png" type="image/png">
+    <link rel="stylesheet" type="text/css" href="layoutNegozio.css">
+    <meta charset="utf-8">
+    <title>Negozio - SoundBoa</title>
+    <script type="text/javascript">
+      var totale=0;
+      function start(event){
+          event.dataTransfer.setData("variabile", event.target.id);
+      }
+      function entra(event){
+        event.preventDefault();
+
+      }
+      function fine(event){
+        event.preventDefault();
+        var data = event.dataTransfer.getData("variabile");
+        var oggetto= document.getElementById(data);
+        var descrizione=oggetto.getAttribute("data-descrizione");
+        var prezzo=oggetto.getAttribute("data-prezzo");
+        totale=totale + parseInt(prezzo);
+
+        var nuovoOggetto=document.createElement("li");
+        nuovoOggetto.innerHTML=descrizione + " - " + prezzo
+
+        var mioDiv=document.getElementById("tot");
+        mioDiv.innerHTML="TOTALE: " + totale + "$";
+
+        var mioElenco= document.getElementById("elenco");
+        mioElenco.appendChild(nuovoOggetto);
+
+      }
+    </script>
+  </head>
+  <body link="#FFFF00" vlink="#FFFF00" alink="#FFFF00">
+    <div id="contenitore">
+
+      <div id="intestazione">
+        <div id="logo">
+          <img src="img/Logo.jpg">
+        </div>
+        <div id="menu">
+          <div class="scelta">
+            <a href="../../index.html">HOME</a>
+          </div>
+          <div class="scelta">
+            <a href="../Musica/musica.html">MUSICA</a>
+          </div>
+          <div class="scelta">
+            <a href="../Artisti/artisti.html">ARTISTI</a>
+          </div>
+          <div class="scelta">
+            <a href="../Generi/generi.html">GENERI</a>
+          </div>
+          <div class="scelta">
+            <a href="negozio.html">NEGOZIO</a>
+          </div>
+        </div>
+        <div id="registrati">
+          <a href="../LocalStorage/localstorage.html"><img src="img/Registrati.jpg"></a>
+        </div>
+      </div>
+
+      <div id="riquadro">
+          <div class="riga"></div>
+        <div class="copertina">
+          <img id="foto1" src="img/Negozio/Capello.jpg" data-descrizione="Capello" data-prezzo="10$" draggable="true" ondragstart="start(event)">
+          <div class="titolo">
+            Capello<br><br>
+          </div>
+          <div class="nomeartista">
+            10,00$
+          </div>
+        </div>
+        <div class="copertina">
+          <img id="foto2" src="img/Negozio/CD.jpg" data-descrizione="CD" data-prezzo="20$" draggable="true" ondragstart="start(event)">
+          <div class="titolo">
+            CD<br><br>
+          </div>
+          <div class="nomeartista">
+            20,00$
+          </div>
+        </div>
+        <div class="copertina">
+          <img id="foto3" src="img/Negozio/Felpa.jpg" data-descrizione="Felpa" data-prezzo="80$" draggable="true" ondragstart="start(event)">
+          <div class="titolo">
+            Felpa<br><br>
+          </div>
+          <div class="nomeartista">
+            80,00$
+          </div>
+        </div>
+        <div class="copertina">
+          <img id="foto4" src="img/Negozio/HeadBand.jpg" data-descrizione="HeadBand" data-prezzo="5$" draggable="true" ondragstart="start(event)">
+          <div class="titolo">
+            HeadBand<br><br>
+          </div>
+          <div class="nomeartista">
+            5,00$
+          </div>
+        </div>
+        <div class="copertina">
+          <img id="foto5" src="img/Negozio/Maglia.jpg" data-descrizione="Maglia" data-prezzo="30$" draggable="true" ondragstart="start(event)">
+          <div class="titolo">
+            Maglia<br><br>
+          </div>
+          <div class="nomeartista">
+            30,00$
+          </div>
+        </div>
+      </div>
+
+      <div id="carello" ondragover="entra(event)" ondrop="fine(event)">
+        <div>
+          <div id="negozio">NEGOZIO</div>
+          <hr>
+          <p>
+            <ol id="elenco">
+
+            </ol>
+            <div id="tot"></div>
+          </p>
+        </div>
+      </div>
+
+      <div id="piedipagina">
+        Sito creato da Alberto Boaglio
+      </div>
+    </div>
+  </body>
+</html>

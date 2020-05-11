@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="icon" href="img/IconaLogo.png" type="image/png">
+    <link rel="stylesheet" type="text/css" href="layoutGrazieADio.css">
+    <meta charset="utf-8">
+    <title>Grazie A Dio - SoundBoa</title>
+    <script type="text/javascript">
+
+    function PlayMusic(){
+      document.getElementById("Music").play();
+    }
+    function PauseMusic(){
+      document.getElementById("Music").pause();
+    }
+    </script>
+  </head>
+  <body link="#FFFF00" vlink="#FFFF00" alink="#FFFF00">
+    <div id="contenitore">
+
+      <div id="intestazione">
+        <div id="logo">
+          <img src="img/Logo.jpg">
+        </div>
+        <div id="menu">
+          <div class="scelta">
+            <a href="../../../../../../index.html">HOME</a>
+          </div>
+          <div class="scelta">
+            <a href="../../../../../Musica/musica.html">MUSICA</a>
+          </div>
+          <div class="scelta">
+            <a href="../../../../../Artisti/artisti.html">ARTISTI</a>
+          </div>
+          <div class="scelta">
+            <a href="../../../../../Generi/generi.html">GENERI</a>
+          </div>
+          <div class="scelta">
+            <a href="../../../../../Negozio/negozio.html">NEGOZIO</a>
+          </div>
+        </div>
+        <div id="registrati">
+          <a href="../../../../../LocalStorage/localstorage.html"><img src="img/Registrati.jpg"></a>
+        </div>
+      </div>
+
+    <div id="riquadro">
+      <div class="copertina2">
+        <img src="img/GrazieADio.jpg">
+      </div>
+      <div id="titolo"><b>Grazie A Dio</b></div>
+      <div id="artista">di <a href="../../ThaSupreme.html">tha Supreme</a></div>
+      <div id="musica">
+        <button onclick="PlayMusic()" class="bottone">Play</button><button onclick="PauseMusic()" class="bottone">Pause</button>
+        <audio src="mp3/GrazieADio.mp3" id="Music"></audio>
+      </div>
+    </div>
+    <div class="riga"></div>
+
+    <div id="canzoni">
+      <div class="testo">
+        Altra musica di tha Supreme
+      </div>
+      <div class="copertina">
+          <a href="../../../ThaSupreme/Canzoni/Annabelle/Annabelle.html"><img src="img/Annabelle.jpg"></a>
+        <div class="testo2">
+          <a href="../../../ThaSupreme/Canzoni/Annabelle/Annabelle.html">Annabelle<br><br></a>
+        </div>
+      </div>
+      <div class="copertina">
+          <a href="../../../ThaSupreme/Canzoni/Rockstar/Rockstar.html"><img src="img/Rockstar.jpg">
+        <div class="testo2">
+          <a href="../../../ThaSupreme/Canzoni/Rockstar/Rockstar.html">Rockstar<br><br></a>
+        </div>
+      </div>
+
+      <div id="canzoni">
+        <div class="copertinafake">
+        </div>
+        <div class="copertinafake">
+        </div>
+      </div>
+
+      <div id="canzoni">
+        <div class="copertinafake">
+        </div>
+        <div class="copertinafake">
+        </div>
+      </div>
+
+      <div id="canzoni">
+        <div class="copertinafake">
+        </div>
+        <div class="copertinafake">
+        </div>
+      </div>
+
+      <div id="piedipagina">
+        Sito creato da Alberto Boaglio
+      </div>
+    </div>
+  </body>
+</html>
